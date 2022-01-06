@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
+  <head>
+  	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
-	<title>Svelte app</title>
+	<title>$TITLE</title>
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 
 	<script defer src='/build/bundle.js'></script>
-</head>
 
-<body>
-</body>
+    <link type="application/json+oembed" href="/$OEMBED">
+
+    <meta name="description" content="$DESC">
+    <meta name="author" content="The Grey Skies">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@greysdawn">
+    <meta name="twitter:image" content="$IMAGE">
+    <meta name="twitter:description" content="$TWITDESC">
+    <meta name="twitter:title" content="$TWITTITLE">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="$OGTITLE">
+    <meta property="og:description" content="$OGDESC">
+    <meta property="og:image" content="$IMAGE">
+    <meta property="og:site_name" content="Grey Skies">
+    <meta name="theme-color" content="#AAAAAA">
+    
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+  </body>
 </html>
