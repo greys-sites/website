@@ -67,13 +67,13 @@ async function setup() {
 		routes[file.slice(0, -3)] = require(__dirname+'/routes/'+file)(app);
 	}
 
-	app.use(express.static(path.join(__dirname, 'frontend/build')));
+	app.use(express.static(path.join(__dirname, 'frontend/public')));
 	app.use(express.static(path.join(__dirname, 'Images/comics')));
 	app.use(express.static(path.join(__dirname, 'Images/flags')));
 	app.use(express.static(path.join(__dirname, 'Images/projects')));
 
 	app.use("/*", async (req, res, next)=> {
-		var index = fs.readFileSync(path.join(__dirname+'/frontend/build/index.html'),'utf8');
+		var index = fs.readFileSync(path.join(__dirname+'/frontend/public/index.html'),'utf8');
 		index = index.replace('$TITLE','Send Us into the Light');
 		index = index.replace('$DESC','Home of the Grey Skies');
 		index = index.replace('$TWITDESC','Home of the Grey Skies');

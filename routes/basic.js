@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = (app) => {
-	const index = fs.readFileSync(path.join(__dirname+'/../frontend/build/index.html'),'utf8');
+	const index = fs.readFileSync(path.join(__dirname+'/../frontend/public/index.html'),'utf8');
 
 	app.get('/',(req,res)=>{
 		res.send(index
